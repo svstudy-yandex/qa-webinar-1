@@ -20,8 +20,8 @@ public class BooleanHacks {
     }
 
     public static boolean calculate(boolean a,  boolean b, boolean c) {
-        boolean res1 = !(!a && !b) ; // можно упростить до a || b
-        boolean res2 = (a && b) || (a && c); // можно упростить до a && (b || c)
-        return !!res1 && res2; // можно упростить до res1 && res2
+        boolean res1 = a || b;
+        boolean res2 = a && (b || c);
+        return res1 && res2;
     }
 }
